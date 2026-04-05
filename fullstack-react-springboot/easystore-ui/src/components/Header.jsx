@@ -9,30 +9,30 @@ const Header = () => {
           <FontAwesomeIcon icon={faTags} className="fa-icon"></FontAwesomeIcon>
           <span className="brand-title">Easy Stickers</span>
         </a>
-        <nav className="nav">
+        <nav className="easynav">
           <ul>
             <li>
-              <a href="/" className="nav-link">
+              <a href="/" className="navLink">
                 Home
               </a>
             </li>
             <li>
-              <a href="/" className="nav-link">
+              <a href="/" className="navLink">
                 About
               </a>
             </li>
             <li>
-              <a href="/" className="nav-link">
+              <a href="/" className="navLink">
                 Contact
               </a>
             </li>
             <li>
-              <a href="/" className="nav-link">
+              <a href="/" className="navLink">
                 Login
               </a>
             </li>
             <li>
-              <a href="/" className="nav-link">
+              <a href="/" className="navLink">
                 <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon>
               </a>
             </li>
