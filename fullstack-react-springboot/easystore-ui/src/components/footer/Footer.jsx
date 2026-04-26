@@ -9,23 +9,20 @@ text-align: center;`;
 
 export default function Footer() {
   return (
-    <>
-      <H1>Demo of Styled-Components from Footer.jsx</H1>
-      <EazyButton>Submit</EazyButton> 
-      <footer>
+      <footer className="flex justify-center items-center py-4 font-primary text-gray-700">
         {" "}
         Built with
         <FontAwesomeIcon
           icon={faHeart}
           aria-label="hidden"
-          className="footer-icon"
+          className="text-red-600 mx-1 animate-pulse"
         ></FontAwesomeIcon>
         by
-        <a href="https://easybytes.com" target="_blank" rel="noreferrer">
+        <a href="https://easybytes.com" target="_blank" rel="noreferrer"
+        className="text-primary font-semibold px-1 transition-colors duration-300 hover:text-dark">
           {" "}
           eazybytes
         </a>
       </footer>
-    </>
   );
 }
