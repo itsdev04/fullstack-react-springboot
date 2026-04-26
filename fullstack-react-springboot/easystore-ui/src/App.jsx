@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Footer from "./components/footer/Footer";
 import React from "react";
+import SearchBox from "./components/SearchBox";
+import Dropdown from "./components/Dropdown";
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
+      <SearchBox label="Search" placeholder="Enter search term..." />
       <Home/>
       <Footer />
     </React.Fragment>
