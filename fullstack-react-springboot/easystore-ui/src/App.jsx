@@ -16,7 +16,6 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <SearchBox label="Search" placeholder="Enter search term..." />
       <Home/>
       <Footer />
     </React.Fragment>
