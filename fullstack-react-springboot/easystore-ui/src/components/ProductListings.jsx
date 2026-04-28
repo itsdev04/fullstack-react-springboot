@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 import SearchBox from "./SearchBox";
 import Dropdown from "./Dropdown";
@@ -10,12 +10,19 @@ const sortList = [
   "Newest Arrivals",
 ];
 export default function ProductListings({ products }) {
-  let searchInput = "";
+  const [searchInput, setSearchInput] = useState("");
   function handleSearchChange(input) {
-    searchInput = input;
-    // Handle search input change
     console.log("Search input changed:", searchInput);
+    setSearchInput(input);
   }
+
+  let filteredAndSortedProducts = Array.isArray(products)
+    ? products.filter(
+        (product) =>
+          product.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+          product.description.toLowerCase().includes(searchInput.toLowerCase()),
+      )
+    : [];
 
   return (
     <div className="max-w-[1152px] mx-auto">
@@ -24,7 +31,7 @@ export default function ProductListings({ products }) {
           label="Search"
           placeholder="Search for products..."
           value={searchInput}
-          handleSearch={(input) => handleSearchChange}
+          handleSearch={(input) => handleSearchChange(input)}
         />
         <Dropdown
           label="Sort by"
@@ -36,8 +43,8 @@ export default function ProductListings({ products }) {
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6 py-12">
-        {products.length > 0 ? (
-          products.map((product) => (
+        {filteredAndSortedProducts.length > 0 ? (
+          filteredAndSortedProducts.map((product) => (
             <ProductCard key={product.productId} product={product} />
           ))
         ) : (
