@@ -3,9 +3,11 @@ import React from "react";
 function Dropdown({ label, options, selectedValue }) {
   return (
     <div className="flex items-center gap-2 justify-end pr-12 flex-1 font-primary">
-      <label className="text-lg font-semibold text-primary">{label}</label>
+      <label className="text-lg font-semibold text-primary dark:text-lighter">
+        {label}
+      </label>
       <select
-        className="px-4 py-2 text-base border rounded-md transition border-primary focus:ring"
+        className="px-4 py-2 text-base border rounded-md transition border-primary focus:ring dark:border-light focus:outline-none focus:ring-primary dark:bg-darkbg dark:text-light dark:focus:ring-light"
         value={selectedValue}
         onChange={(event) => handleSort(event.target.value)}
       >

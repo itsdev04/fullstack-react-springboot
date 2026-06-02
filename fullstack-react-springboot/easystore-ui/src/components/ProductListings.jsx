@@ -61,13 +61,13 @@ export default function ProductListings({ products }) {
   return (
     <div className="max-w-[1152px] mx-auto">
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-12">
-        <SearchBox
+        <SearchBox className="dark:bg-darkbg dark:text-light"
           label="Search"
           placeholder="Search for products..."
           value={searchInput}
           handleSearch={(input) => handleSearchChange(input)}
         />
-        <Dropdown
+        <Dropdown className="dark:bg-darkbg dark:text-light"
           label="Sort by"
           options={sortList.map((option) => ({
             value: option.toLowerCase().replace(/ /g, "-"),
