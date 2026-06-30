@@ -1,4 +1,3 @@
-package com.eazybytes.eazystore.dto;
+package com.devworks.dto;
 
-public record PaymentIntentRequestDto(Long amount, String currency) {
-}
+public record PaymentIntentRequestDto(Long amount, String currency) {}

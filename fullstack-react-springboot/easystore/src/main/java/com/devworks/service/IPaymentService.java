@@ -1,9 +1,9 @@
-package com.eazybytes.eazystore.service;
+package com.devworks.service;
 
-import com.eazybytes.eazystore.dto.PaymentIntentRequestDto;
-import com.eazybytes.eazystore.dto.PaymentIntentResponseDto;
+import com.devworks.dto.PaymentIntentRequestDto;
+import com.devworks.dto.PaymentIntentResponseDto;
 
 public interface IPaymentService {
 
-    PaymentIntentResponseDto createPaymentIntent(PaymentIntentRequestDto requestDto);
+  PaymentIntentResponseDto createPaymentIntent(PaymentIntentRequestDto requestDto);
 }

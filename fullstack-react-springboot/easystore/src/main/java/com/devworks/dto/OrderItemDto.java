@@ -1,6 +1,5 @@
-package com.eazybytes.eazystore.dto;
+package com.devworks.dto;
 
 import java.math.BigDecimal;
 
-public record OrderItemDto(Long productId, Integer quantity, BigDecimal price) {
-}
+public record OrderItemDto(Long productId, Integer quantity, BigDecimal price) {}

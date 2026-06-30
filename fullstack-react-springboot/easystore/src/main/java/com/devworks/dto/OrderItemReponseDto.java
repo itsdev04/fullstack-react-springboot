@@ -1,7 +1,6 @@
-package com.eazybytes.eazystore.dto;
+package com.devworks.dto;
 
 import java.math.BigDecimal;
 
-public record OrderItemReponseDto(String productName, Integer quantity,
-                                  BigDecimal price, String imageUrl) {
-}
+public record OrderItemReponseDto(
+    String productName, Integer quantity, BigDecimal price, String imageUrl) {}

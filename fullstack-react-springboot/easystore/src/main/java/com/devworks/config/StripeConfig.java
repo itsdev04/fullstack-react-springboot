@@ -1,4 +1,4 @@
-package com.eazybytes.eazystore.config;
+package com.devworks.config;
 
 import com.stripe.Stripe;
 import jakarta.annotation.PostConstruct;
@@ -10,11 +10,11 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:stripe.properties")
 public class StripeConfig {
 
-    @Value("${stripe.apiKey}")
-    private String apiKey;
+  @Value("${stripe.apiKey}")
+  private String apiKey;
 
-    @PostConstruct
-    public void init() {
-        Stripe.apiKey = apiKey;
-    }
+  @PostConstruct
+  public void init() {
+    Stripe.apiKey = apiKey;
+  }
 }

@@ -1,11 +1,9 @@
-package com.eazybytes.eazystore.scopes;
+package com.devworks.scopes;
 
 import lombok.Getter;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.ApplicationScope;
-import org.springframework.web.context.annotation.SessionScope;
 
 @Component
 @ApplicationScope
@@ -13,13 +11,13 @@ import org.springframework.web.context.annotation.SessionScope;
 @Slf4j
 public class ApplicationScopedBean {
 
-    private int visitorCount;
+  private int visitorCount;
 
-    public void incrementVisitorCount() {
-        visitorCount++;
-    }
+  public void incrementVisitorCount() {
+    visitorCount++;
+  }
 
-    public ApplicationScopedBean() {
-      log.info("ApplicationScopedBean initialized");
-    }
+  public ApplicationScopedBean() {
+    log.info("ApplicationScopedBean initialized");
+  }
 }

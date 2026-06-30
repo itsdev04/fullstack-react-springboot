@@ -1,9 +1,11 @@
-package com.eazybytes.eazystore.dto;
+package com.devworks.dto;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-public record OrderResponseDto(Long orderId, String status,
-                               BigDecimal totalPrice, String createdAt,
-                               List<OrderItemReponseDto> items) {
-}
+public record OrderResponseDto(
+    Long orderId,
+    String status,
+    BigDecimal totalPrice,
+    String createdAt,
+    List<OrderItemReponseDto> items) {}

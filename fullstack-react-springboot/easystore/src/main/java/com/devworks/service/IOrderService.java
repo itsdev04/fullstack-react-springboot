@@ -1,18 +1,16 @@
-package com.eazybytes.eazystore.service;
+package com.devworks.service;
 
-import com.eazybytes.eazystore.dto.OrderRequestDto;
-import com.eazybytes.eazystore.dto.OrderResponseDto;
-import com.eazybytes.eazystore.entity.Order;
-
+import com.devworks.dto.OrderRequestDto;
+import com.devworks.dto.OrderResponseDto;
 import java.util.List;
 
 public interface IOrderService {
 
-    void createOrder(OrderRequestDto orderRequest);
+  void createOrder(OrderRequestDto orderRequest);
 
-    List<OrderResponseDto> getCustomerOrders();
+  List<OrderResponseDto> getCustomerOrders();
 
-    List<OrderResponseDto> getAllPendingOrders();
+  List<OrderResponseDto> getAllPendingOrders();
 
-    void updateOrderStatus(Long orderId, String orderStatus);
+  void updateOrderStatus(Long orderId, String orderStatus);
 }

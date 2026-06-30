@@ -1,16 +1,14 @@
-package com.eazybytes.eazystore.service;
+package com.devworks.service;
 
-import com.eazybytes.eazystore.dto.ContactRequestDto;
-import com.eazybytes.eazystore.dto.ContactResponseDto;
-import com.eazybytes.eazystore.dto.ProductDto;
-
+import com.devworks.dto.ContactRequestDto;
+import com.devworks.dto.ContactResponseDto;
 import java.util.List;
 
 public interface IContactService {
 
-    boolean saveContact(ContactRequestDto contactRequestDto);
+  boolean saveContact(ContactRequestDto contactRequestDto);
 
-    List<ContactResponseDto> getAllOpenMessages();
+  List<ContactResponseDto> getAllOpenMessages();
 
-    void updateMessageStatus(Long contactId, String status);
+  void updateMessageStatus(Long contactId, String status);
 }

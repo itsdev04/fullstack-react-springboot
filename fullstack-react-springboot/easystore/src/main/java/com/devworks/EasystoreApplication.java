@@ -1,6 +1,6 @@
-package com.eazybytes.eazystore;
+package com.devworks;
 
-import com.eazybytes.eazystore.dto.ContactInfoDto;
+import com.devworks.dto.ContactInfoDto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -11,10 +11,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableCaching
 @EnableJpaAuditing(auditorAwareRef = "auditorAwareImpl")
 @EnableConfigurationProperties(value = {ContactInfoDto.class})
-public class EazystoreApplication {
+public class EasystoreApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(EazystoreApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(EasystoreApplication.class, args);
+  }
 }

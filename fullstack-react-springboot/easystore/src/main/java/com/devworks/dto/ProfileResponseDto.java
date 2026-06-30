@@ -1,14 +1,15 @@
-package com.eazybytes.eazystore.dto;
+package com.devworks.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 public class ProfileResponseDto {
-    private Long customerId;
-    private String name;
-    private String email;
-    private String mobileNumber;
-    private AddressDto address;
-    private boolean emailUpdated;
+  private Long customerId;
+  private String name;
+  private String email;
+  private String mobileNumber;
+  private AddressDto address;
+  private boolean emailUpdated;
 }

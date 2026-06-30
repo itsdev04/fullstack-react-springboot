@@ -1,4 +1,4 @@
-package com.eazybytes.eazystore.scopes;
+package com.devworks.scopes;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,12 +7,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
 @Component
-@RequestScope @Getter @Setter
+@RequestScope
+@Getter
+@Setter
 @Slf4j
 public class RequestScopedBean {
-    private String userName;
+  private String userName;
 
-    public RequestScopedBean() {
-      log.info("RequestScopedBean initialized");
-    }
+  public RequestScopedBean() {
+    log.info("RequestScopedBean initialized");
+  }
 }

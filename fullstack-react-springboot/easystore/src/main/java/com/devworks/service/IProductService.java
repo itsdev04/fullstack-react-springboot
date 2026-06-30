@@ -1,10 +1,9 @@
-package com.eazybytes.eazystore.service;
+package com.devworks.service;
 
-import com.eazybytes.eazystore.dto.ProductDto;
-
+import com.devworks.dto.ProductDto;
 import java.util.List;
 
 public interface IProductService {
 
-    List<ProductDto> getProducts();
+  List<ProductDto> getProducts();
 }

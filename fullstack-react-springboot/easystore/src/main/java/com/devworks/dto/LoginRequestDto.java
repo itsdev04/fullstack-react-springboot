@@ -1,4 +1,3 @@
-package com.eazybytes.eazystore.dto;
+package com.devworks.dto;
 
-public record LoginRequestDto(String username, String password) {
-}
+public record LoginRequestDto(String username, String password) {}

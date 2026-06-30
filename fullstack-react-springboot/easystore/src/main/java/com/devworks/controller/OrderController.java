@@ -1,30 +1,28 @@
-package com.eazybytes.eazystore.controller;
+package com.devworks.controller;
 
-import com.eazybytes.eazystore.dto.OrderRequestDto;
-import com.eazybytes.eazystore.dto.OrderResponseDto;
-import com.eazybytes.eazystore.service.IOrderService;
+import com.devworks.dto.OrderRequestDto;
+import com.devworks.dto.OrderResponseDto;
+import com.devworks.service.IOrderService;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/orders")
 @RequiredArgsConstructor
 public class OrderController {
 
-    private final IOrderService iOrderService;
+  private final IOrderService iOrderService;
 
-    @PostMapping
-    public ResponseEntity<String> createOrder(@RequestBody  OrderRequestDto requestDto) {
-        iOrderService.createOrder(requestDto);
-        return ResponseEntity.ok("Order created successfully!");
-    }
+  @PostMapping
+  public ResponseEntity<String> createOrder(@RequestBody OrderRequestDto requestDto) {
+    iOrderService.createOrder(requestDto);
+    return ResponseEntity.ok("Order created successfully!");
+  }
 
-    @GetMapping
-    public ResponseEntity<List<OrderResponseDto>> loadCustomerOrders() {
-        return ResponseEntity.ok(iOrderService.getCustomerOrders());
-    }
-
+  @GetMapping
+  public ResponseEntity<List<OrderResponseDto>> loadCustomerOrders() {
+    return ResponseEntity.ok(iOrderService.getCustomerOrders());
+  }
 }

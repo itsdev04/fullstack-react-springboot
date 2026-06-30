@@ -1,8 +1,8 @@
-package com.eazybytes.eazystore.controller;
+package com.devworks.controller;
 
-import com.eazybytes.eazystore.dto.ContactInfoDto;
-import com.eazybytes.eazystore.dto.ContactRequestDto;
-import com.eazybytes.eazystore.service.IContactService;
+import com.devworks.dto.ContactInfoDto;
+import com.devworks.dto.ContactRequestDto;
+import com.devworks.service.IContactService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,22 +14,18 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class ContactController {
 
-    private final IContactService iContactService;
-    private final ContactInfoDto contactInfoDto;
+  private final IContactService iContactService;
+  private final ContactInfoDto contactInfoDto;
 
-    @PostMapping
-    public ResponseEntity<String> saveContact(
-            @Valid @RequestBody ContactRequestDto contactRequestDto) {
-        iContactService.saveContact(contactRequestDto);
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body("Request processed successfully");
-    }
+  @PostMapping
+  public ResponseEntity<String> saveContact(
+      @Valid @RequestBody ContactRequestDto contactRequestDto) {
+    iContactService.saveContact(contactRequestDto);
+    return ResponseEntity.status(HttpStatus.CREATED).body("Request processed successfully");
+  }
 
-    @GetMapping
-    public ResponseEntity<ContactInfoDto> getContactInfo() {
-        return ResponseEntity.ok(contactInfoDto);
-    }
-
-
-
+  @GetMapping
+  public ResponseEntity<ContactInfoDto> getContactInfo() {
+    return ResponseEntity.ok(contactInfoDto);
+  }
 }

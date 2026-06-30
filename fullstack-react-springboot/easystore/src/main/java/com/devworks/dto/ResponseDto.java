@@ -1,4 +1,3 @@
-package com.eazybytes.eazystore.dto;
+package com.devworks.dto;
 
-public record ResponseDto(String statusCode, String statusMsg) {
-}
+public record ResponseDto(String statusCode, String statusMsg) {}

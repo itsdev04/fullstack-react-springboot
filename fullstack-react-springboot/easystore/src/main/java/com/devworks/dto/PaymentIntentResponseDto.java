@@ -1,4 +1,3 @@
-package com.eazybytes.eazystore.dto;
+package com.devworks.dto;
 
-public record PaymentIntentResponseDto(String clientSecret) {
-}
+public record PaymentIntentResponseDto(String clientSecret) {}
