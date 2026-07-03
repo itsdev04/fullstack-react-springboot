@@ -48,6 +48,7 @@ public class EazyStoreSecurityConfig {
                   .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**")
                   .hasAnyRole("DEV_ENG", "QA_ENG");
               requests.anyRequest().hasAnyRole("USER", "ADMIN");
+
             })
         .addFilterBefore(new JWTTokenValidatorFilter(publicPaths), BasicAuthenticationFilter.class)
         .formLogin(withDefaults())
